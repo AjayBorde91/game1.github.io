@@ -1,0 +1,109 @@
+<html>
+
+    <head>
+        
+        <title>game designed by Ajay Borde</title>
+        <style type="text/css">
+
+            body {
+            
+                background-color: rgb(220, 226, 205);
+            }
+            
+            #mod {
+            
+            background-color: rgb(85, 202, 74);
+            
+            height :130px;
+            width :300px;
+            margin :200px 200px 200px 400px;
+            padding: 150px;
+            border-radius: 40px;
+            
+            }
+            button {background-color: #008CBA;}
+            
+            #guess {
+
+                margin-right: 10px;;
+                background-color: rgb(175, 170, 180);
+                color: rgb(27, 24, 228);
+                height :50px;
+                width:300px; 
+                padding-left: 85px;
+            }
+
+            #checkGuess {
+                        height: 50px;
+                        width: 80px;
+            }
+
+            select{
+                font-size: larger;
+                font-style: oblique;
+            }
+
+            h3{
+                color: rgb(211, 21, 163);
+               
+
+            }
+            </style>
+            
+            
+        
+    
+    </head>
+
+    <body>
+       <div id="mod">
+           <h3>Game designed By Ajay Borde</h3>
+        <p><h3><b>How many fingers am I holding up? </b> </h3></p>
+        
+       
+
+            <p>
+                <select id="guess">
+                    <option><h1> Start playing </h1></option>
+                    <option><h4>0</h4></option>
+                    <option><h4>1</h4></option>
+                    <option><h4>2</h4></option>
+                    <option><h4>3</h4></option>
+                    <option><h4>4</h4></option>
+                    <option><h4>5</h4></option>
+
+
+                </select>
+            </p>
+            
+            <br>
+            <button id="checkGuess">Guess!</button></p>
+    </div>
+        <script type="text/javascript">
+            
+            document.getElementById("checkGuess").onclick = function() {
+                
+                var randomNumber = Math.random();
+                
+                randomNumber = randomNumber * 6;
+                
+                randomNumber = Math.floor(randomNumber);
+                
+                if (document.getElementById("guess").value == randomNumber) {
+                    
+                    alert("Congratulations ! you win.. i have holded"  + randomNumber);
+                    
+                } else {
+                    
+                    alert("you guessed it wrong! i had holded" + " " + randomNumber);
+                    
+                }
+                
+            }
+            
+            
+        </script>
+        
+    </body>
+
+</html>
